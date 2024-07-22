@@ -4,7 +4,15 @@ let amount = document.querySelector('#amount')
 let allitems = document.querySelector('#allitems')
 let totalamunt = document.querySelector('#totalamount')
 
-let arr = []
+let arr 
+let users = localStorage.getItem('items',JSON.stringify(arr))
+if(arr == null){
+    arr = [] ;
+  }else{
+    arr = users;
+  }
+
+
 
 form.addEventListener('submit',(res)=>{
     res.preventDefault()
@@ -18,10 +26,9 @@ form.addEventListener('submit',(res)=>{
         })
 
         console.log(arr);
-         localStorage.setItem('items',JSON.stringify(arr))
         
 
-        renderitems(arr)
+        renderitems()
     }else{
         alert("enter a expense and amount")
     }
@@ -35,10 +42,11 @@ form.addEventListener('submit',(res)=>{
 })
 
 
-let total = []
 function renderitems() {
+    let totalprice = 0
+    
+    localStorage.setItem('items',JSON.stringify(arr))
 
-    total = ""
 
     allitems.innerHTML=""
     arr.map((items,index)=>{
@@ -51,22 +59,27 @@ function renderitems() {
     <hr>
         </div>
         `
+    //  total =items.amount
+    
+    // console.log(typeof items.amount);
+    totalprice += +items.amount
+    // totalprice=0    
+    // for (let i = 0; i < total.length; i++) {
+        //     totalprice = total + total[i]
         
-        total.push(items.amount)
-
+        // }
     })
-
-    for (let i = 0; i < total.length; i++) {
-        totalprice += total + total[i]
-        
-        totalamunt.innerHTML = `
-            <h1>total Amount = ${totalprice}</h1>`
-    }
-    }
     // let newamount = total + items.amount 
     
-
-    console.log(total);
+    if (arr != []) {
+    
+    totalamunt.innerHTML = `
+    <h1>total Amount = ${totalprice}</h1>`
+    }
+    else{totalprice = ""}
+            
+            
+    }
    
     
 
