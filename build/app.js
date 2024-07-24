@@ -195,16 +195,3 @@ console.log(index);
 
 // console.log(Date(2024));
 
-
-
-
-
-
-
-
-
-
-
-
-
-// created by Muhammad Farhan 03182127256

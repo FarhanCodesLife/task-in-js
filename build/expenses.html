@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="app.css">
+    <title>expense management</title>
+
+</head>
+<body>
+    <h1 id="username" ></h1>
+    <div class="container">
+        <h1>Expense Management System</h1>
+        <!-- <div class="search-bar">
+            <input type="text" placeholder="Search expenses..." id="searchInput">
+        </div> -->
+        <form id="form">
+            <div class="form-group">
+                <label for="expenseName">Expense Name</label>
+                <input type="text" id="expense" name="expenseName" required>
+            </div>
+            <div class="form-group">
+                <label for="expenseAmount">Amount</label>
+                <input type="number" id="amount" name="expenseAmount" required>
+            </div>
+            <!-- <div class="form-group">
+                <label for="expenseDescription">Description</label>
+                <textarea id="expenseDescription" name="description" required></textarea>
+            </div> -->
+            <button type="submit">Add Expense</button>
+        </form>
+    </div>
+
+
+
+    <div class="expense-list">
+        
+        <table id="expenseTable"  >
+        <thead>
+        <tr>
+        <th colspan="">S.No</th>
+        <th>Expense Name</th>
+        <th>Date</th>
+        <th>Price</th>
+        <th>Edit</th>
+        <th>Delet</th>
+
+        </tr>
+        </thead>
+        <tbody id="newrow">
+        <!--  -->
+        
+        </tbody>
+        <tfoot id="total">
+        
+        
+        </tfoot>
+        </table>
+        </div>
+        
+    <div id="allitems">
+
+        
+    </div>
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <h2>Expenses</h2>
+    <ul id="allitems">
+    </ul>
+    <h2>Total Amount</h2> -->
+   
+
+    <!-- <form id="form">
+
+        <label for="expense">Expense</label>
+        <input type="text" id="expense">
+        <label for="amount">Amount</label>
+        <input type="number" id="amount">
+
+        <button type="submit">submit</button>
+    </form> -->
+    
+
+    <div id=""></div>
+
+   <div id="totalamount">
+    
+   </div>
+    
+
+
+    <script  src="app.js"></script>
+</body>
+</html>
